@@ -98,5 +98,5 @@ The application will be hosted at http://127.0.0.1:8000/.
 
 - Django: Web framework used for building the application.
 - MySQL: Database used for storing user information and uploaded documents.
-- SpaCy / Hugging Face Transformers: NLP libraries used for text extraction and analysis.
+- SpaCy / Hugging Face Transformers: NLP libraries used for text analysis.
 
