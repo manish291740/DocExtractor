@@ -1,0 +1,79 @@
+
+{% extends "index.html" %}
+ {% block CustomCSS %}
+<style>
+
+p {
+            position: relative;
+            margin: 20px 0;
+            padding-top: 15px; /* To make space for floating label */
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        label {
+            position: absolute;
+            top: 2px;
+            left: 10px;
+            color: #666;
+            transition: 0.2s ease all;
+            pointer-events: none;
+            background-color: #fff; /* To cover input background */
+            padding: 0 5px; /* Adjust padding to ensure label covers input background */
+        }
+
+        input:focus + label,
+        input:not(:placeholder-shown) + label {
+            top: -10px;
+            left: 10px;
+            color: #007bff;
+            font-size: 12px;
+        }
+</style>
+
+{% endblock %}
+{% block content %}
+<section class="bg-light py-3 py-md-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+        <div class="card border border-light-subtle rounded-3 shadow-sm">
+          <div class="card-body p-3 p-md-4 p-xl-5">
+            <div class="text-center mb-5">
+             <h2 class="fs-6 fw-normal text-center text-secondary mb-4">Sign in to your account</h2>
+            </div>
+              <div class="mb-3"></div>
+
+
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+
+
+    <div class="col-12">
+                  <div class="d-grid my-3">
+                    <button class="btn btn-primary btn-lg" type="submit">Log in</button>
+                  </div>
+                </div>
+
+    <div class="col-12">
+                  <p class="m-0 text-secondary text-center">Don't have an account? <a class="link-primary text-decoration-none" href="{% url 'Register' %}">Register</a></p>
+    </div>
+
+</form>
+
+ </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

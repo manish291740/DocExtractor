@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f5f5;
+            color: #721c24;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #f5c6cb;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+        }
+        .scrollable-text {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            overflow-y: auto;
+            color: #495057;
+            min-height: calc(1em * 2);
+            max-height: calc(1em * 20);
+            line-height: 1.5;
+        }
+        .errorarea{
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            overflow-y: auto;
+            color: #495057;
+            min-height: calc(1em * 1);
+            max-height: calc(1em * 5);
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Error</h1>
+        <div class="errorarea">
+            <pre>{{ error_message }}</pre>
+        </div>
+       
+
+        {% if extracted_text %}
+            <h2>Extracted Text</h2>
+            <div class="scrollable-text">
+                <pre>{{ extracted_text }}</pre>
+            </div>
+        {% else %}
+            <p>No text was extracted due to the error.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
