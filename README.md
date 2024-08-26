@@ -10,7 +10,7 @@ This Django application allows users to register, log in, and upload images or P
 - File Upload: Users can upload images or PDF documents.
 - Text Extraction: The application extracts text from uploaded documents.
 - Text Analysis: The extracted text is analyzed using NLP models like SpaCy or Hugging Face Transformers.
-- Data Display: The uploaded documents and their extracted text are displayed in a table, where users can initiate the processing.
+- Data Display: The uploaded documents  are displayed in a table, where users can initiate the processing and their extracted text display on page.
 
 
 ## Prerequisites
